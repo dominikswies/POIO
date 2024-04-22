@@ -1,19 +1,47 @@
 klasy: 
     user
     redaktor : user
+    {
+        dodawanie eventu
+
+    }
     czytelnik : user
+    {
+        obstawianie wyniku
+    }
     zawodnik
+    {
+        imie_nazwisko
+        numer na koszulce
+        druzyna?
+        gole
+        faule
+        asysty
+    }
+    druzyna
+    {
+        lista zawodnikow
+        nazwa
+        rekord
+    }
+    mecz
+    {
+        aktualny wynik
+        minuta
+    }
     event
-    gol : event
-    asysta : event
-    kartka : event
-    rożny : event
-    wolny : event
-    karny : event
-    spalony : event
-    faul : event
-    zmianaZawodnika : event
-    strzalCelny : event
-    strzalNiecelny : event
-    dosrodkowanie : event
-    var : event
+    {
+        gol : event
+        asysta : event
+        kartka : event
+        rożny : event
+        wolny : event
+        karny : event
+        spalony : event
+        faul : event
+        zmianaZawodnika : event
+        strzalCelny : event
+        strzalNiecelny : event
+        dosrodkowanie : event
+        var : event
+    }
