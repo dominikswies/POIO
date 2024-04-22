@@ -1,0 +1,19 @@
+klasy: 
+    user
+    redaktor : user
+    czytelnik : user
+    zawodnik
+    event
+    gol : event
+    asysta : event
+    kartka : event
+    rożny : event
+    wolny : event
+    karny : event
+    spalony : event
+    faul : event
+    zmianaZawodnika : event
+    strzalCelny : event
+    strzalNiecelny : event
+    dosrodkowanie : event
+    var : event
