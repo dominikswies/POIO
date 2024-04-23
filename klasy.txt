@@ -1,47 +1,76 @@
-klasy: 
-    user
-    redaktor : user
-    {
-        dodawanie eventu
+// Dominik Święs, Kacper Szczurek, Paweł Siwiela 
+// POIO
 
-    }
-    czytelnik : user
+klasy: 
+    redaktor
     {
+        pola:
+        login
+        haslo
+        metody:
+        dodaj_event(minuta, event)
+    }
+    czytelnik 
+    {
+        pola:
+        login
+        haslo
+        metody:
         obstawianie wyniku
+        wyswietl
     }
     zawodnik
     {
-        imie_nazwisko
+        pola:
+        imie
+        nazwisko
         numer na koszulce
-        druzyna?
+        druzyna
         gole
-        faule
         asysty
+        kartki
     }
     druzyna
     {
-        lista zawodnikow
+        pola:
+        <zawodnik> lista_zawodnikow
         nazwa
-        rekord
+        bilans
+        wygrane
+        porazki
+        remis
     }
     mecz
     {
-        aktualny wynik
+        pola:
+        wynik
         minuta
+        liczba_kartek
+        liczna_rożnych
+        liczba_fauli
+        liczba_strzalow_celnych
+        liczba_strzalow_niecelnych
+        liczba_dosrodkowan
+        
+        <event> eventy
+        <druzyna> druzyny
     }
     event
     {
-        gol : event
-        asysta : event
-        kartka : event
-        rożny : event
-        wolny : event
-        karny : event
-        spalony : event
-        faul : event
-        zmianaZawodnika : event
-        strzalCelny : event
-        strzalNiecelny : event
-        dosrodkowanie : event
-        var : event
+        nazwa = "gol", "kartka" itd
+        metody:
+        gol(zawodnik,druzyna -> mecz.wynik, mecz.eventy, zawodnik.gole
+        
+        asysta(zawodnik) -> zawodnik.asysty, mecz.eventy
+        kartka(zawodnik) -> zawodnik.kartki
+        rożny(druzna, liczba_rożnych) -> 
+        wolny(druzyna, liczba_wolnych)
+        karny(druzyna)
+        spalony(zawodnik, liczba_spalonych)
+        faul(zawodnik, liczba_fauli)
+        zmianaZawodnika(zawodnik1,zawodnik2)
+        strzalCelny(druzyna, liczba_strzalow_celnych)
+        strzalNiecelny(druzyna, liczba_strzalow_niecelnych)
+        dosrodkowanie(druzyna)
+        var?
     }
